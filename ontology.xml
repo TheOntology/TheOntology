@@ -1,0 +1,1267 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.TheOn.org#"
+     xml:base="http://www.TheOn.org"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.TheOn.org#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:drammar="http://www.purl.org/drammar/0.9"
+     xmlns:beta201901="https://w3id.org/lso/intro/beta201901#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.TheOn.org">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl"/>
+        <owl:imports rdf:resource="http://www.purl.org/drammar/0.9"/>
+        <owl:imports rdf:resource="https://w3id.org/lso/intro/beta201901"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.purl.org/drammar/0.9achieves -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.purl.org/drammar/0.9achieves"/>
+    
+
+
+    <!-- http://www.purl.org/drammar/0.9inConflictWith -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.purl.org/drammar/0.9inConflictWith"/>
+    
+
+
+    <!-- http://www.purl.org/drammar/0.9intends -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.purl.org/drammar/0.9intends"/>
+    
+
+
+    <!-- http://www.purl.org/drammar/0.9isIntentional -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.purl.org/drammar/0.9isIntentional"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R12_has_referred_to_entity -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/lso/intro/beta201901#R12_has_referred_to_entity"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R13_has_referring_entity -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/lso/intro/beta201901#R13_has_referring_entity"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R18_shows_actualization -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/lso/intro/beta201901#R18_shows_actualization"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R21_identifies -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/lso/intro/beta201901#R21_identifies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.TheOn.org#appears_on_the_skenè_as -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#appears_on_the_skenè_as">
+        <owl:inverseOf rdf:resource="http://www.TheOn.org#is_shown_on_the_skenè_as"/>
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#contains_literary_motif -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#contains_literary_motif">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Motif"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#develops_into_process -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#develops_into_process">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Plan"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_concept -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_concept">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_textual_concretization -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_textual_concretization">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_characterization_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_characterization_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_interepreted_as -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_interepreted_as">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT1_TextPassage"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_object_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_object_of">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_prerogative_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_prerogative_of">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#RitualAction"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_represented_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_represented_by">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Process"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_shown_on_the_skenè_as -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_shown_on_the_skenè_as">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_textual_concretization_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_textual_concretization_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#takes_part_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#takes_part_in">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:domain rdf:resource="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes -->
+
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant -->
+
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R18_shows_actualization -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta201901#R18_shows_actualization">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R4_defines -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta201901#R4_defines">
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.TheOn.org#goal_achievement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#goal_achievement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_epithet -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#has_epithet">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_induced -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#is_induced">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R44_has_wording -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta201901#R44_has_wording">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.TheOn.org#Animal -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Animal">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:comment>The category referring to animals</rdfs:comment>
+        <rdfs:label>Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Chorus -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Chorus">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+        <rdfs:comment>The class Chorus refers to the homogeneous, non-individualised group of performers, who comment with a collective voice on the dramatic action in the context of ancient greek tragedy, comedy or satyr plays.</rdfs:comment>
+        <rdfs:label>Chorus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Deus_Ex_Machina -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Deus_Ex_Machina">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+        <rdfs:comment>Mechanism used in ancient Greek and Roman drama which consists of a person or thing that appears or is introduced into a situation suddenly and unexpectedly and provides an artificial or contrived solution to an apparently insoluble difficulty.</rdfs:comment>
+        <rdfs:label>Deus_ex_machina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Divine_Entity -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Divine_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:comment>An entity that is presented in the text as divine or sacred in some form, thus has for the most part divine characteristics.</rdfs:comment>
+        <rdfs:label>Divine_entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Dramatic_mechanism -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Dramatic_mechanism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics"/>
+        <rdfs:comment>The class Dramatic_mechanism refers to all the mechanisms performed in ancient dramas which have a physical, not only textual,correspondence.</rdfs:comment>
+        <rdfs:label>Dramatic_mechanism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Entreaty -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Entreaty">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Epithet -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Epithet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech"/>
+        <rdfs:comment>An epithet is a byname, or a descriptive term (word or phrase), accompanying or occurring in place of a name and having entered common usage. (e.g Pallas Athena)</rdfs:comment>
+        <rdfs:label>Epithet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Epithet_action -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Epithet_action">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Epithet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Formal_Expression -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Formal_Expression">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+        <rdfs:comment>An Information Entity can be interpreted at two different levels, the one from the point of view of the content and the one from the point of view of the linguistic and rhetorical features. In this sense, the formal  content of a text is composed of features that can be analysed only from the linguistic point of view.</rdfs:comment>
+        <rdfs:label>Formal_Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#GenericAction -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#GenericAction">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:comment>The class GenericAction refers to all the actions which are not ritual</rdfs:comment>
+        <rdfs:label>GenericAction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Generic_UnintentionalProcess -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Generic_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <owl:disjointWith rdf:resource="http://www.TheOn.org#Specific_UnintentionalProcess"/>
+        <rdfs:comment>A Generic_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which is generic thus it does not specify a specific way of acting,</rdfs:comment>
+        <rdfs:label>Generic_UnintentionalProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Human_Entity -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Human_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:comment>An entity that is presented in the text as human and that has for the most part human characteristics</rdfs:comment>
+        <rdfs:label>Human_Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Hybris -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Hybris">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Topos"/>
+        <rdfs:comment>This class refers to an excess of ambition, pride, etc ultimately causing the transgressor&apos;sin in Greek tragedy</rdfs:comment>
+        <rdfs:label>Hybris</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Invocation -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Invocation">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Mental_UnintentionalProcess -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Mental_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:comment>A Mental_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which includes non-physical actions (e.g. suggest thoughts)</rdfs:comment>
+        <rdfs:label>Mental_UnintentionalProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Metrical_verses -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Metrical_verses">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Physical_UnintentionalProcess -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Physical_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:comment>A Physical_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which includes physical actions (e.g. throwing a spear, offering prizes or threatening punishment)</rdfs:comment>
+        <rdfs:label>Physical_UnintentionalProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Physical_feature -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Physical_feature">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Epithet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Prayer -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Prayer">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Punishment">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#GenericAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Revenge -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Revenge">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#GenericAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#RitualAction -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#RitualAction">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:comment>The class RitualAction refers to all the actions describing the ways in which humans turn to divine entities in the tragedies by means of rituals.</rdfs:comment>
+        <rdfs:label>RitualAction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Sacrifice -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Sacrifice">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Specific_UnintentionalProcess -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Specific_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:comment>A Specific_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which is specific thus it does specify a specific way of acting</rdfs:comment>
+        <rdfs:label>Specific_UnintentionalProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Vow -->
+
+
+    <owl:Class rdf:about="http://www.TheOn.org#Vow">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent -->
+
+
+    <owl:Class rdf:about="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity -->
+
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning -->
+
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.purl.org/drammar#Action -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Action"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#Agent -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Agent"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#DirectlyExecutablePlan -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#DramaEndurant -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#DramaEndurant">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/drammar#DramaEntity -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#DramaEntity"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#Goal -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Goal"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#Plan -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Plan"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#Process -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Process">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/drammar#UnintentionalProcess -->
+
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT1_TextPassage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT1_TextPassage"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT7_Interpretament -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT7_Interpretament"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics">
+        <rdfs:comment>All those feature peculiar of a specific literary genre.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT_Motif -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT_Motif"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT_Topos -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT_Topos">
+        <rdfs:label>This class refers to a traditional term or formula in literature. (e.g. locus amoenus)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>This class contains subclasses for every formal aspect of a text</rdfs:comment>
+        <rdfs:label>Formal_Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.TheOn.org#Agamemnon -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemnon">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+        <takes_part_in rdf:resource="http://www.TheOn.org#Agamemnon_sacrifices_Iphigenia"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Agamemon_goes_to_Troy_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Agamemnon_goes_to_Troy_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemnon_goes_to_Troy_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <goal_achievement>&quot;False&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Agamemnon_must_sacrifice_Iphigenia -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemnon_must_sacrifice_Iphigenia">
+        <rdf:type rdf:resource="http://www.TheOn.org#Punishment"/>
+        <drammar:isIntentional>&quot;True&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Agamemnon_sacrifices_Iphigenia -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemnon_sacrifices_Iphigenia">
+        <rdf:type rdf:resource="http://www.TheOn.org#Mental_UnintentionalProcess"/>
+        <beta201901:R44_has_wording>&quot;But when he had donned the yoke of Necessity, with veering of mind,  impious, unholy, unsanctified, from that moment he changed his intention and began to conceive that deed of uttermost audacity. For wretched delusion, counsellor of ill, primal source of woe, makes mortals bold. So then he hardened his heart to sacrifice his daughter&quot;</beta201901:R44_has_wording>
+        <drammar:isIntentional>&quot;False&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Agamemon_goes_to_Troy_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemon_goes_to_Troy_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+        <goal_achievement>&quot;False&quot;</goal_achievement>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Agamemnon_goes_to_Troy_goal"/>
+        <drammar:inConflictWith rdf:resource="http://www.TheOn.org#Punishment_of_Agamemnon_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Apollo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Apollo">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Punishment_of_Cassandra_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Arthemis -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Arthemis">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <has_epithet>&quot;Agrótera&quot;</has_epithet>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Punishment_of_Agamemnon_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Cassandra -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Cassandra">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Cassandra_Unheard -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Cassandra_Unheard">
+        <rdf:type rdf:resource="http://www.TheOn.org#Mental_UnintentionalProcess"/>
+        <drammar:isIntentional>&quot;False&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Cassandra_must_be_unheard -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Cassandra_must_be_unheard">
+        <rdf:type rdf:resource="http://www.TheOn.org#Punishment"/>
+        <drammar:isIntentional>&quot;True&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Children -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Children">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Clitemnestra -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Clitemnestra">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+        <takes_part_in rdf:resource="http://www.TheOn.org#Killing_of_Agamemnon"/>
+        <beta201901:R44_has_wording>&quot;This is the contest of an ancient feud, pondered by me of old, and it has come, however long delayed. I stand where I dealt the blow; my purpose is achieved.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Deus_ex_machina_Medea -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Deus_ex_machina_Medea">
+        <rdf:type rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+        <beta201901:R44_has_wording>&quot;Medea appears aloft in a winged chariot upon the mechane, which rises from behind the skene.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Deus_ex_machina_Prometheus_Bound -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Deus_ex_machina_Prometheus_Bound">
+        <rdf:type rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+        <has_textual_concretization rdf:resource="http://www.TheOn.org#motif1"/>
+        <beta201901:R44_has_wording>&quot;Whistles and shrills with rapid beat of wings.
+There cometh nought but to my spirit brings
+Horror and fear.
+The DAUGHTERS OF OCEANUS draw near in mid-air in their winged chariot.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Freeing_of_Prometheus_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Freeing_of_Prometheus_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <goal_achievement>&quot;False&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#INT3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#INT3">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <beta201901:R12_has_referred_to_entity rdf:resource="http://www.TheOn.org#Sacrifice_of_Isaac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Invocation_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Invocation_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+        <develops_into_process rdf:resource="http://www.TheOn.org#Prometheus_invocation"/>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Freeing_of_Prometheus_goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Jason -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Jason">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Saving_children_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Killing_children -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Killing_children">
+        <rdf:type rdf:resource="http://www.TheOn.org#Revenge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Killing_children_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Killing_children_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#killing_children_goal"/>
+        <drammar:inConflictWith rdf:resource="http://www.TheOn.org#Saving_children_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Killing_of_Agamemnon -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Killing_of_Agamemnon">
+        <rdf:type rdf:resource="http://www.TheOn.org#Mental_UnintentionalProcess"/>
+        <beta201901:R44_has_wording>&quot;Clitaemnestra: Do not imagine that I am Agamemnon&apos;s spouse. A phantom resembling that corpse&apos;s wife, the ancient bitter evil spirit of Atreus, that grim banqueter, has offered him in payment, sacrificing a full-grown victim in vengeance for those slain babes.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Medea -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Medea">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+        <appears_on_the_skenè_as rdf:resource="http://www.TheOn.org#Deus_ex_machina_Medea"/>
+        <takes_part_in rdf:resource="http://www.TheOn.org#Killing_children"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Killing_children_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Ocean -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Ocean">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <appears_on_the_skenè_as rdf:resource="http://www.TheOn.org#Deus_ex_machina_Prometheus_Bound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Prometheus -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Prometheus">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <takes_part_in rdf:resource="http://www.TheOn.org#Prometheus_being_punished"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Invocation_plan"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Stealing_fire_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Prometheus_being_punished -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Prometheus_being_punished">
+        <rdf:type rdf:resource="http://www.TheOn.org#Generic_UnintentionalProcess"/>
+        <rdf:type rdf:resource="http://www.TheOn.org#Physical_UnintentionalProcess"/>
+        <drammar:isIntentional>&quot;False&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Prometheus_invocation -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Prometheus_invocation">
+        <rdf:type rdf:resource="http://www.TheOn.org#Invocation"/>
+        <is_prerogative_of rdf:resource="http://www.TheOn.org#Prometheus"/>
+        <beta201901:R44_has_wording>&quot;O divine air Breezes on swift bird-wings,
+Ye river fountains, and of ocean-waves
+The multitudinous laughter Mother Earth!
+And thou all-seeing circle of the sun,
+Behold what I, a God, from Gods endure!&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Agamemnon_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Agamemnon_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <goal_achievement>&quot;True&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Agamemnon_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Agamemnon_plan">
+        <rdf:type rdf:resource="http://www.TheOn.org#Punishment"/>
+        <develops_into_process rdf:resource="http://www.TheOn.org#Agamemnon_must_sacrifice_Iphigenia"/>
+        <beta201901:R44_has_wording>&quot;For, in her pity, holy Artemis is angry at the winged hounds of her father, for they sacrifice a wretched timorous thing, together with her young, before she has brought them forth. An abomination to her is the eagles&apos; feast.”</beta201901:R44_has_wording>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Punishment_of_Agamemnon_goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Cassandra_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Cassandra_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <goal_achievement>&quot;True&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Cassandra_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Cassandra_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Plan"/>
+        <develops_into_process rdf:resource="http://www.TheOn.org#Cassandra_must_be_unheard"/>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Punishment_of_Cassandra_goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Prometheus -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Prometheus">
+        <rdf:type rdf:resource="http://www.TheOn.org#Punishment"/>
+        <drammar:isIntentional>&quot;True&quot;</drammar:isIntentional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Prometheus_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Prometheus_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <develops_into_process rdf:resource="http://www.TheOn.org#Punishment_of_Prometheus"/>
+        <goal_achievement>&quot;True&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment_of_Prometheus_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Punishment_of_Prometheus_plan">
+        <rdf:type rdf:resource="http://www.TheOn.org#Punishment"/>
+        <beta201901:R44_has_wording>&quot;Io
+Tell me who has bound you fast in this ravine.
+
+Prometheus
+Zeus by his will.&quot;</beta201901:R44_has_wording>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Punishment_of_Prometheus_goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Sacrifice_of_Isaac -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Sacrifice_of_Isaac">
+        <rdf:type rdf:resource="http://www.TheOn.org#Mental_UnintentionalProcess"/>
+        <beta201901:R44_has_wording>&quot;Così arrivarono al luogo che Dio gli aveva indicato; qui Abramo costruì l&apos;altare, collocò la legna, legò suo figlio Isacco e lo depose sull&apos;altare, sopra la legna. 10Poi Abramo stese la mano e prese il coltello per immolare suo figlio.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Saving_children_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Saving_children_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Stealing_fire_plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Stealing_fire_plan">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#DirectlyExecutablePlan"/>
+        <develops_into_process rdf:resource="http://www.TheOn.org#Prometheus_being_punished"/>
+        <goal_achievement>&quot;True&quot;</goal_achievement>
+        <drammar:achieves rdf:resource="http://www.TheOn.org#Stolen_fire"/>
+        <drammar:inConflictWith rdf:resource="http://www.TheOn.org#men_without_fire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Stolen_fire -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Stolen_fire">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <beta201901:R44_has_wording>&quot;Power: indulge your insolence, keep on wresting from the gods their honors to give them to creatures of a day.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Tragic_sacrifice -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Tragic_sacrifice">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/beta201901#INT7_Interpretament"/>
+        <beta201901:R44_has_wording>La differenza tra l’eroe tragico (Agamennone che sacrifica la figlia Ifigenia) e
+Abramo balza agli occhi facilmente. L’eroe tragico rimane tutto dentro la sfera
+etica… Diversa la situazione di Abramo Egli ha cancellato con la sua azione tutta
+l’etica ottenendo il suo telos superiore fuori di essa, rispetto al quale ha sospeso
+l’etica. (…)&quot;  Kierkegaard -Timore e Tremore</beta201901:R44_has_wording>
+        <beta201901:R21_identifies rdf:resource="http://www.TheOn.org#INT3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Zeus -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Zeus">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <takes_part_in rdf:resource="http://www.TheOn.org#Punishment_of_Prometheus"/>
+        <has_epithet>&quot;Xènios&quot;</has_epithet>
+        <drammar:intends rdf:resource="http://www.TheOn.org#Punishment_of_Prometheus_plan"/>
+        <drammar:intends rdf:resource="http://www.TheOn.org#men_without_fire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#killing_children_goal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#killing_children_goal">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Goal"/>
+        <goal_achievement>&quot;True&quot;</goal_achievement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#men_without_fire -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#men_without_fire">
+        <rdf:type rdf:resource="http://www.purl.org/drammar#Plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#motif1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#motif1">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Motif"/>
+        <is_textual_concretization_of rdf:resource="http://www.TheOn.org#Deus_ex_machina_Medea"/>
+        <beta201901:R44_has_wording>&quot;Ah me! Ah me! what wafture nigh at hand,
+As of great birds of prey, is this I hear?
+The bright air fanned
+Whistles and shrills with rapid beat of wings.&quot;</beta201901:R44_has_wording>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+
