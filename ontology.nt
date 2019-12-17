@@ -69,7 +69,6 @@
 <http://www.TheOn.org#has_concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.TheOn.org#has_concept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning> .
 <http://www.TheOn.org#has_concept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/drammar#Agent> .
-<http://www.purl.org/drammar#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.TheOn.org#has_concept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/drammar#Process> .
 # 
 # http://www.TheOn.org#has_textual_concretization
@@ -120,8 +119,8 @@
 # 
 # http://www.TheOn.org#takes_part_in
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <drammarhttp://www.purl.org/drammar#Agent> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.TheOn.org#Divine_Entity> .
+<http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/drammar#Agent> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.TheOn.org#Deus_Ex_Machina> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/drammar#Process> .
 # 
@@ -180,9 +179,6 @@
 # #
 # #################################################################
 # 
-# 
-# drammarhttp://www.purl.org/drammar#Agent
-<drammarhttp://www.purl.org/drammar#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.TheOn.org#Animal
 <http://www.TheOn.org#Animal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -325,6 +321,7 @@
 # http://www.purl.org/drammar#Action
 # 
 # http://www.purl.org/drammar#Agent
+<http://www.purl.org/drammar#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.purl.org/drammar#DirectlyExecutablePlan
 <http://www.purl.org/drammar#DirectlyExecutablePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

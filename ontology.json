@@ -1,7 +1,4 @@
 [ {
-  "@id" : "drammarhttp://www.purl.org/drammar#Agent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://www.TheOn.org",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
@@ -752,9 +749,9 @@
   "@id" : "http://www.TheOn.org#takes_part_in",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "drammarhttp://www.purl.org/drammar#Agent"
-  }, {
     "@id" : "http://www.TheOn.org#Divine_Entity"
+  }, {
+    "@id" : "http://www.purl.org/drammar#Agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.TheOn.org#Deus_Ex_Machina"

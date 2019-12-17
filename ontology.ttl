@@ -138,8 +138,8 @@
 
 ###  http://www.TheOn.org#takes_part_in
 :takes_part_in rdf:type owl:ObjectProperty ;
-               rdfs:domain <drammarhttp://www.purl.org/drammar#Agent> ,
-                           :Divine_Entity ;
+               rdfs:domain :Divine_Entity ,
+                           <http://www.purl.org/drammar#Agent> ;
                rdfs:range :Deus_Ex_Machina ,
                           <http://www.purl.org/drammar#Process> .
 
@@ -196,10 +196,6 @@
 #################################################################
 #    Classes
 #################################################################
-
-###  drammarhttp://www.purl.org/drammar#Agent
-<drammarhttp://www.purl.org/drammar#Agent> rdf:type owl:Class .
-
 
 ###  http://www.TheOn.org#Animal
 :Animal rdf:type owl:Class ;
