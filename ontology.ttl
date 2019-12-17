@@ -1,0 +1,765 @@
+@prefix : <http://www.TheOn.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.TheOn.org> .
+
+<http://www.TheOn.org> rdf:type owl:Ontology ;
+                        owl:imports <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl> ,
+                                    <http://www.purl.org/drammar/0.9> ,
+                                    <https://w3id.org/lso/intro/beta201901> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.purl.org/drammar#achieves
+<http://www.purl.org/drammar#achieves> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.purl.org/drammar#inConflictWith
+<http://www.purl.org/drammar#inConflictWith> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.purl.org/drammar#intends
+<http://www.purl.org/drammar#intends> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.purl.org/drammar#isIntendedBy
+<http://www.purl.org/drammar#isIntendedBy> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.purl.org/drammar#isIntentional
+<http://www.purl.org/drammar#isIntentional> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lso/intro/beta201901#R12_has_referred_to_entity
+<https://w3id.org/lso/intro/beta201901#R12_has_referred_to_entity> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lso/intro/beta201901#R13_has_referring_entity
+<https://w3id.org/lso/intro/beta201901#R13_has_referring_entity> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lso/intro/beta201901#R18_shows_actualization
+<https://w3id.org/lso/intro/beta201901#R18_shows_actualization> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lso/intro/beta201901#R21_identifies
+<https://w3id.org/lso/intro/beta201901#R21_identifies> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.TheOn.org#appears_on_the_skenè_as
+:appears_on_the_skenè_as rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :is_shown_on_the_skenè_as ;
+                         rdfs:domain :Divine_Entity ;
+                         rdfs:range :Deus_Ex_Machina .
+
+
+###  http://www.TheOn.org#contains_literary_motif
+:contains_literary_motif rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature> ,
+                                     <https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship> ;
+                         rdfs:range <https://w3id.org/lso/intro/beta201901#INT_Motif> .
+
+
+###  http://www.TheOn.org#develops_into_process
+:develops_into_process rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://www.purl.org/drammar#Plan> ;
+                       rdfs:range <http://www.purl.org/drammar#Process> .
+
+
+###  http://www.TheOn.org#has_concept
+:has_concept rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning> ;
+             rdfs:range <http://www.purl.org/drammar#Agent> ,
+                        <http://www.purl.org/drammar#Process> .
+
+
+###  http://www.TheOn.org#has_textual_concretization
+:has_textual_concretization rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Dramatic_mechanism ;
+                            rdfs:range <https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature> ,
+                                       <https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> .
+
+
+###  http://www.TheOn.org#is_characterization_of
+:is_characterization_of rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature> ,
+                                    <https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature> ,
+                                    <https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> ,
+                                    <https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship> ;
+                        rdfs:range :Divine_Entity ,
+                                   :Human_Entity .
+
+
+###  http://www.TheOn.org#is_interepreted_as
+:is_interepreted_as rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://w3id.org/lso/intro/beta201901#INT1_TextPassage> ;
+                    rdfs:range :Formal_Expression .
+
+
+###  http://www.TheOn.org#is_object_of
+:is_object_of rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.purl.org/drammar#DramaEntity> ;
+              rdfs:range <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning> .
+
+
+###  http://www.TheOn.org#is_prerogative_of
+:is_prerogative_of rdf:type owl:ObjectProperty ;
+                   rdfs:domain :RitualAction ;
+                   rdfs:range :Human_Entity .
+
+
+###  http://www.TheOn.org#is_represented_by
+:is_represented_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.purl.org/drammar#Process> ;
+                   rdfs:range :Formal_Expression .
+
+
+###  http://www.TheOn.org#is_shown_on_the_skenè_as
+:is_shown_on_the_skenè_as rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Deus_Ex_Machina ;
+                          rdfs:range :Divine_Entity .
+
+
+###  http://www.TheOn.org#is_textual_concretization_of
+:is_textual_concretization_of rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature> ,
+                                          <https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> ;
+                              rdfs:range :Dramatic_mechanism .
+
+
+###  http://www.TheOn.org#takes_part_in
+:takes_part_in rdf:type owl:ObjectProperty ;
+               rdfs:domain :Divine_Entity ,
+                           <http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> ;
+               rdfs:range :Deus_Ex_Machina ,
+                          <http://www.purl.org/drammar#Process> .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes
+<http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes> rdfs:range <http://www.purl.org/drammar#DramaEntity> .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant
+<http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant> rdfs:range :Formal_Expression ,
+                                                                                        <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning> .
+
+
+###  https://w3id.org/lso/intro/beta201901#R18_shows_actualization
+<https://w3id.org/lso/intro/beta201901#R18_shows_actualization> rdfs:domain :Formal_Expression .
+
+
+###  https://w3id.org/lso/intro/beta201901#R4_defines
+<https://w3id.org/lso/intro/beta201901#R4_defines> rdf:type owl:ObjectProperty ;
+                                                   rdfs:range <https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature> ,
+                                                              <https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature> ,
+                                                              <https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> ,
+                                                              <https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.TheOn.org#goal_achievement
+:goal_achievement rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain <http://www.purl.org/drammar#Goal> ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.TheOn.org#has_epithet
+:has_epithet rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Divine_Entity ;
+             rdfs:range xsd:string .
+
+
+###  http://www.TheOn.org#is_induced
+:is_induced rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.purl.org/drammar#UnintentionalProcess> ;
+            rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/lso/intro/beta201901#R44_has_wording
+<https://w3id.org/lso/intro/beta201901#R44_has_wording> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.TheOn.org#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.purl.org/drammar#Agent> ;
+        rdfs:comment "The category referring to animals" ;
+        rdfs:label "Animal" .
+
+
+###  http://www.TheOn.org#Chorus
+:Chorus rdf:type owl:Class ;
+        rdfs:subClassOf :Dramatic_mechanism ;
+        rdfs:comment "The class Chorus refers to the homogeneous, non-individualised group of performers, who comment with a collective voice on the dramatic action in the context of ancient greek tragedy, comedy or satyr plays." ;
+        rdfs:label "Chorus" .
+
+
+###  http://www.TheOn.org#Deus_Ex_Machina
+:Deus_Ex_Machina rdf:type owl:Class ;
+                 rdfs:subClassOf :Dramatic_mechanism ;
+                 rdfs:comment "Mechanism used in ancient Greek and Roman drama which consists of a person or thing that appears or is introduced into a situation suddenly and unexpectedly and provides an artificial or contrived solution to an apparently insoluble difficulty." ;
+                 rdfs:label "Deus_ex_machina" .
+
+
+###  http://www.TheOn.org#Divine_Entity
+:Divine_Entity rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.purl.org/drammar#Agent> ;
+               rdfs:comment "An entity that is presented in the text as divine or sacred in some form, thus has for the most part divine characteristics." ;
+               rdfs:label "Divine_entity" .
+
+
+###  http://www.TheOn.org#Dramatic_mechanism
+:Dramatic_mechanism rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics> ;
+                    rdfs:comment "The class Dramatic_mechanism refers to all the mechanisms performed in ancient dramas which have a physical, not only textual,correspondence." ;
+                    rdfs:label "Dramatic_mechanism" .
+
+
+###  http://www.TheOn.org#Entreaty
+:Entreaty rdf:type owl:Class ;
+          rdfs:subClassOf :RitualAction .
+
+
+###  http://www.TheOn.org#Epithet
+:Epithet rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech> ;
+         rdfs:comment "An epithet is a byname, or a descriptive term (word or phrase), accompanying or occurring in place of a name and having entered common usage. (e.g Pallas Athena)" ;
+         rdfs:label "Epithet" .
+
+
+###  http://www.TheOn.org#Epithet_action
+:Epithet_action rdf:type owl:Class ;
+                rdfs:subClassOf :Epithet .
+
+
+###  http://www.TheOn.org#Formal_Expression
+:Formal_Expression rdf:type owl:Class ;
+                   owl:disjointWith <http://www.purl.org/drammar#DramaEntity> ;
+                   rdfs:comment "An Information Entity can be interpreted at two different levels, the one from the point of view of the content and the one from the point of view of the linguistic and rhetorical features. In this sense, the formal  content of a text is composed of features that can be analysed only from the linguistic point of view." ;
+                   rdfs:label "Formal_Expression" .
+
+
+###  http://www.TheOn.org#GenericAction
+:GenericAction rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.purl.org/drammar#Action> ;
+               rdfs:comment "The class GenericAction refers to all the actions which are not ritual" ;
+               rdfs:label "GenericAction" .
+
+
+###  http://www.TheOn.org#Generic_UnintentionalProcess
+:Generic_UnintentionalProcess rdf:type owl:Class ;
+                              rdfs:subClassOf <http://www.purl.org/drammar#UnintentionalProcess> ;
+                              owl:disjointWith :Specific_UnintentionalProcess ;
+                              rdfs:comment "A Generic_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which is generic thus it does not specify a specific way of acting," ;
+                              rdfs:label "Generic_UnintentionalProcess" .
+
+
+###  http://www.TheOn.org#Human_Entity
+:Human_Entity rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.purl.org/drammar#Agent> ;
+              rdfs:comment "An entity that is presented in the text as human and that has for the most part human characteristics" ;
+              rdfs:label "Human_Entity" .
+
+
+###  http://www.TheOn.org#Hybris
+:Hybris rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT_Topos> ;
+        rdfs:comment "This class refers to an excess of ambition, pride, etc ultimately causing the transgressor'sin in Greek tragedy" ;
+        rdfs:label "Hybris" .
+
+
+###  http://www.TheOn.org#Invocation
+:Invocation rdf:type owl:Class ;
+            rdfs:subClassOf :RitualAction .
+
+
+###  http://www.TheOn.org#Mental_UnintentionalProcess
+:Mental_UnintentionalProcess rdf:type owl:Class ;
+                             rdfs:subClassOf <http://www.purl.org/drammar#UnintentionalProcess> ;
+                             rdfs:comment "A Mental_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which includes non-physical actions (e.g. suggest thoughts)" ;
+                             rdfs:label "Mental_UnintentionalProcess" .
+
+
+###  http://www.TheOn.org#Metrical_verses
+:Metrical_verses rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> .
+
+
+###  http://www.TheOn.org#Physical_UnintentionalProcess
+:Physical_UnintentionalProcess rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.purl.org/drammar#UnintentionalProcess> ;
+                               rdfs:comment "A Physical_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which includes physical actions (e.g. throwing a spear, offering prizes or threatening punishment)" ;
+                               rdfs:label "Physical_UnintentionalProcess" .
+
+
+###  http://www.TheOn.org#Physical_feature
+:Physical_feature rdf:type owl:Class ;
+                  rdfs:subClassOf :Epithet .
+
+
+###  http://www.TheOn.org#Prayer
+:Prayer rdf:type owl:Class ;
+        rdfs:subClassOf :RitualAction .
+
+
+###  http://www.TheOn.org#Punishment
+:Punishment rdf:type owl:Class ;
+            rdfs:subClassOf :GenericAction .
+
+
+###  http://www.TheOn.org#Revenge
+:Revenge rdf:type owl:Class ;
+         rdfs:subClassOf :GenericAction .
+
+
+###  http://www.TheOn.org#RitualAction
+:RitualAction rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.purl.org/drammar#Action> ;
+              rdfs:comment "The class RitualAction refers to all the actions describing the ways in which humans turn to divine entities in the tragedies by means of rituals." ;
+              rdfs:label "RitualAction" .
+
+
+###  http://www.TheOn.org#Sacrifice
+:Sacrifice rdf:type owl:Class ;
+           rdfs:subClassOf :RitualAction .
+
+
+###  http://www.TheOn.org#Specific_UnintentionalProcess
+:Specific_UnintentionalProcess rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.purl.org/drammar#UnintentionalProcess> ;
+                               rdfs:comment "A Specific_UnintentionalProcess is a process with the property isintentional that values False and implies a divine influence which is specific thus it does specify a specific way of acting" ;
+                               rdfs:label "Specific_UnintentionalProcess" .
+
+
+###  http://www.TheOn.org#Vow
+:Vow rdf:type owl:Class ;
+     rdfs:subClassOf :RitualAction .
+
+
+###  http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent
+<http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity
+<http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity> owl:disjointWith <http://www.purl.org/drammar#DramaEntity> .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning
+<http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning> owl:disjointWith <http://www.purl.org/drammar#DramaEntity> .
+
+
+###  http://www.purl.org/drammar#Action
+<http://www.purl.org/drammar#Action> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#Agent
+<http://www.purl.org/drammar#Agent> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#DirectlyExecutablePlan
+<http://www.purl.org/drammar#DirectlyExecutablePlan> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#DramaEndurant
+<http://www.purl.org/drammar#DramaEndurant> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.purl.org/drammar#DramaEntity> .
+
+
+###  http://www.purl.org/drammar#DramaEntity
+<http://www.purl.org/drammar#DramaEntity> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#Goal
+<http://www.purl.org/drammar#Goal> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#Plan
+<http://www.purl.org/drammar#Plan> rdf:type owl:Class .
+
+
+###  http://www.purl.org/drammar#Process
+<http://www.purl.org/drammar#Process> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.purl.org/drammar#DramaEntity> .
+
+
+###  http://www.purl.org/drammar#UnintentionalProcess
+<http://www.purl.org/drammar#UnintentionalProcess> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.purl.org/drammar#Process> .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT1_TextPassage
+<https://w3id.org/lso/intro/beta201901#INT1_TextPassage> rdf:type owl:Class .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature
+<https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :Formal_Expression .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT7_Interpretament
+<https://w3id.org/lso/intro/beta201901#INT7_Interpretament> rdf:type owl:Class .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature
+<https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature> .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature
+<https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature> .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech
+<https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech> rdf:type owl:Class .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics
+<https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics> rdf:type owl:Class ;
+                                                           rdfs:comment "All those feature peculiar of a specific literary genre." .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT_Motif
+<https://w3id.org/lso/intro/beta201901#INT_Motif> rdf:type owl:Class .
+
+
+###  https://w3id.org/lso/intro/beta201901#INT_Topos
+<https://w3id.org/lso/intro/beta201901#INT_Topos> rdf:type owl:Class ;
+                                                  rdfs:label "This class refers to a traditional term or formula in literature. (e.g. locus amoenus)" .
+
+
+###  https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature
+<https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature> ;
+                                                             rdfs:comment "This class contains subclasses for every formal aspect of a text" ;
+                                                             rdfs:label "Formal_Feature" .
+
+
+###  https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship
+<https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.TheOn.org#Agamemnon
+:Agamemnon rdf:type owl:NamedIndividual ,
+                    :Human_Entity ;
+           :takes_part_in :Agamemnon_sacrifices_Iphigenia ;
+           <http://www.purl.org/drammar#intends> :Agamemon_goes_to_Troy_plan .
+
+
+###  http://www.TheOn.org#Agamemnon_goes_to_Troy_goal
+:Agamemnon_goes_to_Troy_goal rdf:type owl:NamedIndividual ,
+                                      <http://www.purl.org/drammar#Goal> ;
+                             :goal_achievement "\"False\"" .
+
+
+###  http://www.TheOn.org#Agamemnon_must_sacrifice_Iphigenia
+:Agamemnon_must_sacrifice_Iphigenia rdf:type owl:NamedIndividual ,
+                                             :Punishment ;
+                                    <http://www.purl.org/drammar#isIntentional> "\"True\"" .
+
+
+###  http://www.TheOn.org#Agamemnon_sacrifices_Iphigenia
+:Agamemnon_sacrifices_Iphigenia rdf:type owl:NamedIndividual ,
+                                         :Mental_UnintentionalProcess ;
+                                <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"But when he had donned the yoke of Necessity, with veering of mind,  impious, unholy, unsanctified, from that moment he changed his intention and began to conceive that deed of uttermost audacity. For wretched delusion, counsellor of ill, primal source of woe, makes mortals bold. So then he hardened his heart to sacrifice his daughter\"" ;
+                                <http://www.purl.org/drammar#isIntentional> "\"False\"" .
+
+
+###  http://www.TheOn.org#Agamemon_goes_to_Troy_plan
+:Agamemon_goes_to_Troy_plan rdf:type owl:NamedIndividual ,
+                                     <http://www.purl.org/drammar#DirectlyExecutablePlan> ;
+                            <http://www.purl.org/drammar#achieves> :Agamemnon_goes_to_Troy_goal ;
+                            <http://www.purl.org/drammar#inConflictWith> :Punishment_of_Agamemnon_plan ;
+                            <http://www.purl.org/drammar#isIntendedBy> :Agamemnon .
+
+
+###  http://www.TheOn.org#Apollo
+:Apollo rdf:type owl:NamedIndividual ,
+                 :Divine_Entity ;
+        <http://www.purl.org/drammar#intends> :Punishment_of_Cassandra_plan .
+
+
+###  http://www.TheOn.org#Arthemis
+:Arthemis rdf:type owl:NamedIndividual ,
+                   :Divine_Entity ;
+          :has_epithet "\"Agrótera\"" ;
+          <http://www.purl.org/drammar#intends> :Punishment_of_Agamemnon_plan .
+
+
+###  http://www.TheOn.org#Cassandra
+:Cassandra rdf:type owl:NamedIndividual ,
+                    :Divine_Entity .
+
+
+###  http://www.TheOn.org#Cassandra_Unheard
+:Cassandra_Unheard rdf:type owl:NamedIndividual ,
+                            :Mental_UnintentionalProcess ;
+                   <http://www.purl.org/drammar#isIntentional> "\"False\"" .
+
+
+###  http://www.TheOn.org#Cassandra_must_be_unheard
+:Cassandra_must_be_unheard rdf:type owl:NamedIndividual ,
+                                    :Punishment ;
+                           <http://www.purl.org/drammar#isIntentional> "\"True\"" .
+
+
+###  http://www.TheOn.org#Children
+:Children rdf:type owl:NamedIndividual ,
+                   :Human_Entity .
+
+
+###  http://www.TheOn.org#Clitemnestra
+:Clitemnestra rdf:type owl:NamedIndividual ,
+                       :Human_Entity ;
+              :takes_part_in :Killing_of_Agamemnon ;
+              <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"This is the contest of an ancient feud, pondered by me of old, and it has come, however long delayed. I stand where I dealt the blow; my purpose is achieved.\"" .
+
+
+###  http://www.TheOn.org#Deus_ex_machina_Medea
+:Deus_ex_machina_Medea rdf:type owl:NamedIndividual ,
+                                :Deus_Ex_Machina ;
+                       <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"Medea appears aloft in a winged chariot upon the mechane, which rises from behind the skene.\"" .
+
+
+###  http://www.TheOn.org#Deus_ex_machina_Prometheus_Bound
+:Deus_ex_machina_Prometheus_Bound rdf:type owl:NamedIndividual ,
+                                           :Deus_Ex_Machina ;
+                                  :has_textual_concretization :motif1 ;
+                                  <https://w3id.org/lso/intro/beta201901#R44_has_wording> """\"Whistles and shrills with rapid beat of wings.
+There cometh nought but to my spirit brings
+Horror and fear.
+The DAUGHTERS OF OCEANUS draw near in mid-air in their winged chariot.\"""" .
+
+
+###  http://www.TheOn.org#Freeing_of_Prometheus_goal
+:Freeing_of_Prometheus_goal rdf:type owl:NamedIndividual ,
+                                     <http://www.purl.org/drammar#Goal> ;
+                            :goal_achievement "\"False\"" .
+
+
+###  http://www.TheOn.org#INT3
+:INT3 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship> ;
+      <https://w3id.org/lso/intro/beta201901#R12_has_referred_to_entity> :Sacrifice_of_Isaac .
+
+
+###  http://www.TheOn.org#Invocation_plan
+:Invocation_plan rdf:type owl:NamedIndividual ,
+                          <http://www.purl.org/drammar#DirectlyExecutablePlan> ;
+                 :develops_into_process :Prometheus_invocation ;
+                 <http://www.purl.org/drammar#achieves> :Freeing_of_Prometheus_goal ;
+                 <http://www.purl.org/drammar#isIntendedBy> :Prometheus .
+
+
+###  http://www.TheOn.org#Jason
+:Jason rdf:type owl:NamedIndividual ,
+                :Human_Entity ;
+       <http://www.purl.org/drammar#intends> :Saving_children_plan .
+
+
+###  http://www.TheOn.org#Killing_children
+:Killing_children rdf:type owl:NamedIndividual ,
+                           :Revenge .
+
+
+###  http://www.TheOn.org#Killing_children_plan
+:Killing_children_plan rdf:type owl:NamedIndividual ,
+                                <http://www.purl.org/drammar#DirectlyExecutablePlan> ;
+                       <http://www.purl.org/drammar#achieves> :killing_children_goal ;
+                       <http://www.purl.org/drammar#inConflictWith> :Saving_children_plan ;
+                       <http://www.purl.org/drammar#isIntendedBy> :Medea .
+
+
+###  http://www.TheOn.org#Killing_of_Agamemnon
+:Killing_of_Agamemnon rdf:type owl:NamedIndividual ,
+                               :Mental_UnintentionalProcess ;
+                      <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"Clitaemnestra: Do not imagine that I am Agamemnon's spouse. A phantom resembling that corpse's wife, the ancient bitter evil spirit of Atreus, that grim banqueter, has offered him in payment, sacrificing a full-grown victim in vengeance for those slain babes.\"" .
+
+
+###  http://www.TheOn.org#Medea
+:Medea rdf:type owl:NamedIndividual ,
+                :Human_Entity ;
+       :appears_on_the_skenè_as :Deus_ex_machina_Medea ;
+       :takes_part_in :Killing_children ;
+       <http://www.purl.org/drammar#intends> :Killing_children_plan .
+
+
+###  http://www.TheOn.org#Ocean
+:Ocean rdf:type owl:NamedIndividual ,
+                :Divine_Entity ;
+       :appears_on_the_skenè_as :Deus_ex_machina_Prometheus_Bound .
+
+
+###  http://www.TheOn.org#Prometheus
+:Prometheus rdf:type owl:NamedIndividual ,
+                     :Divine_Entity ;
+            :takes_part_in :Prometheus_being_punished ;
+            <http://www.purl.org/drammar#intends> :Invocation_plan ,
+                                                  :Stealing_fire_plan .
+
+
+###  http://www.TheOn.org#Prometheus_being_punished
+:Prometheus_being_punished rdf:type owl:NamedIndividual ,
+                                    :Generic_UnintentionalProcess ,
+                                    :Physical_UnintentionalProcess ;
+                           <http://www.purl.org/drammar#isIntentional> "\"False\"" .
+
+
+###  http://www.TheOn.org#Prometheus_invocation
+:Prometheus_invocation rdf:type owl:NamedIndividual ,
+                                :Invocation ;
+                       :is_prerogative_of :Prometheus ;
+                       <https://w3id.org/lso/intro/beta201901#R44_has_wording> """\"O divine air Breezes on swift bird-wings,
+Ye river fountains, and of ocean-waves
+The multitudinous laughter Mother Earth!
+And thou all-seeing circle of the sun,
+Behold what I, a God, from Gods endure!\"""" .
+
+
+###  http://www.TheOn.org#Punishment_of_Agamemnon_goal
+:Punishment_of_Agamemnon_goal rdf:type owl:NamedIndividual ,
+                                       <http://www.purl.org/drammar#Goal> ;
+                              :goal_achievement "\"True\"" .
+
+
+###  http://www.TheOn.org#Punishment_of_Agamemnon_plan
+:Punishment_of_Agamemnon_plan rdf:type owl:NamedIndividual ,
+                                       :Punishment ;
+                              :develops_into_process :Agamemnon_must_sacrifice_Iphigenia ;
+                              <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"For, in her pity, holy Artemis is angry at the winged hounds of her father, for they sacrifice a wretched timorous thing, together with her young, before she has brought them forth. An abomination to her is the eagles' feast.”" ;
+                              <http://www.purl.org/drammar#achieves> :Punishment_of_Agamemnon_goal ;
+                              <http://www.purl.org/drammar#isIntendedBy> :Arthemis .
+
+
+###  http://www.TheOn.org#Punishment_of_Cassandra_goal
+:Punishment_of_Cassandra_goal rdf:type owl:NamedIndividual ,
+                                       <http://www.purl.org/drammar#Goal> ;
+                              :goal_achievement "\"True\"" .
+
+
+###  http://www.TheOn.org#Punishment_of_Cassandra_plan
+:Punishment_of_Cassandra_plan rdf:type owl:NamedIndividual ,
+                                       <http://www.purl.org/drammar#Plan> ;
+                              :develops_into_process :Cassandra_must_be_unheard ;
+                              <http://www.purl.org/drammar#achieves> :Punishment_of_Cassandra_goal ;
+                              <http://www.purl.org/drammar#isIntendedBy> :Apollo .
+
+
+###  http://www.TheOn.org#Punishment_of_Prometheus
+:Punishment_of_Prometheus rdf:type owl:NamedIndividual ,
+                                   :Punishment ;
+                          <http://www.purl.org/drammar#isIntentional> "\"True\"" .
+
+
+###  http://www.TheOn.org#Punishment_of_Prometheus_goal
+:Punishment_of_Prometheus_goal rdf:type owl:NamedIndividual ,
+                                        <http://www.purl.org/drammar#Goal> ;
+                               :develops_into_process :Punishment_of_Prometheus ;
+                               :goal_achievement "\"True\"" .
+
+
+###  http://www.TheOn.org#Punishment_of_Prometheus_plan
+:Punishment_of_Prometheus_plan rdf:type owl:NamedIndividual ,
+                                        :Punishment ;
+                               <https://w3id.org/lso/intro/beta201901#R44_has_wording> """\"Io
+Tell me who has bound you fast in this ravine.
+
+Prometheus
+Zeus by his will.\"""" ;
+                               <http://www.purl.org/drammar#achieves> :Punishment_of_Prometheus_goal ;
+                               <http://www.purl.org/drammar#isIntendedBy> :Zeus .
+
+
+###  http://www.TheOn.org#Sacrifice_of_Isaac
+:Sacrifice_of_Isaac rdf:type owl:NamedIndividual ,
+                             :Mental_UnintentionalProcess ;
+                    <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"Così arrivarono al luogo che Dio gli aveva indicato; qui Abramo costruì l'altare, collocò la legna, legò suo figlio Isacco e lo depose sull'altare, sopra la legna. 10Poi Abramo stese la mano e prese il coltello per immolare suo figlio.\"" .
+
+
+###  http://www.TheOn.org#Saving_children_plan
+:Saving_children_plan rdf:type owl:NamedIndividual ,
+                               <http://www.purl.org/drammar#DirectlyExecutablePlan> ;
+                      <http://www.purl.org/drammar#isIntendedBy> :Jason .
+
+
+###  http://www.TheOn.org#Stealing_fire_plan
+:Stealing_fire_plan rdf:type owl:NamedIndividual ,
+                             <http://www.purl.org/drammar#DirectlyExecutablePlan> ;
+                    :develops_into_process :Prometheus_being_punished ;
+                    :goal_achievement "\"True\"" ;
+                    <http://www.purl.org/drammar#achieves> :Stolen_fire ;
+                    <http://www.purl.org/drammar#inConflictWith> :men_without_fire ;
+                    <http://www.purl.org/drammar#isIntendedBy> :Prometheus .
+
+
+###  http://www.TheOn.org#Stolen_fire
+:Stolen_fire rdf:type owl:NamedIndividual ,
+                      <http://www.purl.org/drammar#Goal> ;
+             <https://w3id.org/lso/intro/beta201901#R44_has_wording> "\"Power: indulge your insolence, keep on wresting from the gods their honors to give them to creatures of a day.\"" .
+
+
+###  http://www.TheOn.org#Tragic_sacrifice
+:Tragic_sacrifice rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lso/intro/beta201901#INT7_Interpretament> ;
+                  <https://w3id.org/lso/intro/beta201901#R44_has_wording> """La differenza tra l’eroe tragico (Agamennone che sacrifica la figlia Ifigenia) e
+Abramo balza agli occhi facilmente. L’eroe tragico rimane tutto dentro la sfera
+etica… Diversa la situazione di Abramo Egli ha cancellato con la sua azione tutta
+l’etica ottenendo il suo telos superiore fuori di essa, rispetto al quale ha sospeso
+l’etica. (…)\"  Kierkegaard -Timore e Tremore""" ;
+                  <https://w3id.org/lso/intro/beta201901#R21_identifies> :INT3 .
+
+
+###  http://www.TheOn.org#Zeus
+:Zeus rdf:type owl:NamedIndividual ,
+               :Divine_Entity ;
+      :takes_part_in :Punishment_of_Prometheus ;
+      :has_epithet "\"Xènios\"" ;
+      <http://www.purl.org/drammar#intends> :Punishment_of_Prometheus_plan ,
+                                            :men_without_fire .
+
+
+###  http://www.TheOn.org#killing_children_goal
+:killing_children_goal rdf:type owl:NamedIndividual ,
+                                <http://www.purl.org/drammar#Goal> ;
+                       :goal_achievement "\"True\"" .
+
+
+###  http://www.TheOn.org#men_without_fire
+:men_without_fire rdf:type owl:NamedIndividual ,
+                           <http://www.purl.org/drammar#Plan> ;
+                  <http://www.purl.org/drammar#isIntendedBy> :Zeus .
+
+
+###  http://www.TheOn.org#motif1
+:motif1 rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/lso/intro/beta201901#INT_Motif> ;
+        :is_textual_concretization_of :Deus_ex_machina_Medea ;
+        <https://w3id.org/lso/intro/beta201901#R44_has_wording> """\"Ah me! Ah me! what wafture nigh at hand,
+As of great birds of prey, is this I hear?
+The bright air fanned
+Whistles and shrills with rapid beat of wings.\"""" .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
