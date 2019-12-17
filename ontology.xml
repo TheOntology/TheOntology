@@ -240,8 +240,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.TheOn.org#takes_part_in">
+        <rdfs:domain rdf:resource="drammarhttp://www.purl.org/drammar#Agent"/>
         <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
-        <rdfs:domain rdf:resource="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
         <rdfs:range rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
         <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
     </owl:ObjectProperty>
@@ -349,6 +349,13 @@
      -->
 
 
+    
+
+
+    <!-- drammarhttp://www.purl.org/drammar#Agent -->
+
+
+    <owl:Class rdf:about="drammarhttp://www.purl.org/drammar#Agent"/>
     
 
 
@@ -605,13 +612,6 @@
     <owl:Class rdf:about="http://www.TheOn.org#Vow">
         <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent -->
-
-
-    <owl:Class rdf:about="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
     
 
 

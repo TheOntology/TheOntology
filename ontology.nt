@@ -120,8 +120,8 @@
 # 
 # http://www.TheOn.org#takes_part_in
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <drammarhttp://www.purl.org/drammar#Agent> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.TheOn.org#Divine_Entity> .
-<http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.TheOn.org#Deus_Ex_Machina> .
 <http://www.TheOn.org#takes_part_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/drammar#Process> .
 # 
@@ -180,6 +180,9 @@
 # #
 # #################################################################
 # 
+# 
+# drammarhttp://www.purl.org/drammar#Agent
+<drammarhttp://www.purl.org/drammar#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.TheOn.org#Animal
 <http://www.TheOn.org#Animal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -312,9 +315,6 @@
 # http://www.TheOn.org#Vow
 <http://www.TheOn.org#Vow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.TheOn.org#Vow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.TheOn.org#RitualAction> .
-# 
-# http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent
-<http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity
 <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.purl.org/drammar#DramaEntity> .

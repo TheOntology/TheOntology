@@ -138,8 +138,8 @@
 
 ###  http://www.TheOn.org#takes_part_in
 :takes_part_in rdf:type owl:ObjectProperty ;
-               rdfs:domain :Divine_Entity ,
-                           <http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> ;
+               rdfs:domain <drammarhttp://www.purl.org/drammar#Agent> ,
+                           :Divine_Entity ;
                rdfs:range :Deus_Ex_Machina ,
                           <http://www.purl.org/drammar#Process> .
 
@@ -196,6 +196,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  drammarhttp://www.purl.org/drammar#Agent
+<drammarhttp://www.purl.org/drammar#Agent> rdf:type owl:Class .
+
 
 ###  http://www.TheOn.org#Animal
 :Animal rdf:type owl:Class ;
@@ -351,10 +355,6 @@
 ###  http://www.TheOn.org#Vow
 :Vow rdf:type owl:Class ;
      rdfs:subClassOf :RitualAction .
-
-
-###  http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent
-<http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent> rdf:type owl:Class .
 
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity
